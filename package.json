@@ -1,0 +1,27 @@
+{
+  "name": "translation-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "description": "Document translation pipeline backend — Dreamtech AI Apps Academy",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "fast-xml-parser": "^5.5.4",
+    "helmet": "^8.1.0",
+    "jszip": "^3.10.1",
+    "multer": "^2.1.1",
+    "uuid": "^13.0.0"
+  }
+}
