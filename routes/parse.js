@@ -2,7 +2,6 @@ const express = require('express');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
 const { parsePptx } = require('../parsers/pptx');
 
 const router = express.Router();
@@ -10,7 +9,7 @@ const router = express.Router();
 // Store uploaded files in /tmp/<job_id>/ folder
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const jobId = uuidv4();
+    const jobId = require('crypto').randomUUID();
     req.jobId = jobId; // attach to request for use in route handler
 
     const jobDir = path.join(__dirname, '..', 'tmp', jobId);
